@@ -4,6 +4,7 @@ class ApiController < ApplicationController
 	def initialize
 		@mashable = Mashable.new
 		@digg = Digg.new
+		@reddit = Reddit.new
 	end
 
 #Mashable
@@ -39,11 +40,34 @@ class ApiController < ApplicationController
 	def digg_dates
 		render json: @digg.dates
 	end
+
 	def digg_links
 		render json: @digg.links
 	end
 
 	def digg_all
 		render json: @digg.all
+	end
+
+#Reddit	
+	def reddit_all
+		render json: @reddit.all
+	end
+
+	def reddit_titles
+		render json: @reddit.titles
+	end
+
+	def reddit_authors
+		render json: @reddit.authors
+	end
+
+	def reddit_dates
+		render json: @reddit.dates
+	end
+
+	def reddit_links
+		render json: @reddit.links
+		
 	end
 end
