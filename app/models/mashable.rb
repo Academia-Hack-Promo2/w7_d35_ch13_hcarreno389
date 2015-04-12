@@ -1,6 +1,6 @@
 class Mashable < ActiveRecord::Base
-	#include colorize
-	def init
+	
+	def initialize
 		@title = []
 		@author = []
 		@date = []
@@ -22,20 +22,24 @@ class Mashable < ActiveRecord::Base
 			@all.push(link)
 		end
 	end
+
 	def titles
 		@title
 	end
+
 	def authors
 		@author
 	end
+
 	def dates
 		@date
 	end
+
 	def links
 		@link
 	end
+	
 	def all
 		@all
-		
 	end
 end

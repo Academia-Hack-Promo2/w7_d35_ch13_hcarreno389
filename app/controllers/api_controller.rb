@@ -1,18 +1,30 @@
 #require '/home/hector/hack/retos/rails/disenando_apis/app/models/noticium.rb'
 
 class ApiController < ApplicationController
-	
-
-	def mashable_titles
-	notice1 = Mashable.new
-	notice1.init
-	render json: notice1.titles
-	end
-	
-	def mashable_all
-		notice1 = Mashable.new
-		notice1.init
-		render json: notice1.all
+	def initialize
+		@notice1 = Mashable.new
 		
 	end
+
+	def mashable_titles
+		render json: @notice1.titles
+	end
+
+	def mashable_all
+		render json: @notice1.all
+	end
+
+	def mashable_authors
+		render json: @notice1.authors
+	end
+
+	def mashable_dates
+		render json: @notice1.dates
+	end
+
+	def mashable_links
+		render json: @notice1.links
+	end
+
+
 end
