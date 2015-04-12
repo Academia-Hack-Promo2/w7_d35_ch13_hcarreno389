@@ -20,6 +20,13 @@ Rails.application.routes.draw do
   get 'noticias/reddit/dates', to: 'api#reddit_dates'
   get 'noticias/reddit/links', to: 'api#reddit_links'
 
+  #all roots
+  get 'noticias/all/all', to: 'api#all_all'
+  get 'noticias/all/titles', to: 'api#all_titles'
+  get 'noticias/all/authors', to: 'api#all_authors'
+  get 'noticias/all/dates', to: 'api#all_dates'
+  get 'noticias/all/links', to: 'api#all_links'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

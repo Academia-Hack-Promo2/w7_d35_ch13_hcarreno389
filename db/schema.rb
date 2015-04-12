@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410210122) do
+ActiveRecord::Schema.define(version: 20150412052814) do
+
+  create_table "alls", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "diggs", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,6 +34,11 @@ ActiveRecord::Schema.define(version: 20150410210122) do
   end
 
   create_table "reddits", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "todos", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

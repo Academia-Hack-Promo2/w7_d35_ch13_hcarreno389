@@ -5,6 +5,7 @@ class ApiController < ApplicationController
 		@mashable = Mashable.new
 		@digg = Digg.new
 		@reddit = Reddit.new
+		@all = Todo.new
 	end
 
 #Mashable
@@ -68,6 +69,26 @@ class ApiController < ApplicationController
 
 	def reddit_links
 		render json: @reddit.links
-		
+	end
+
+	#All
+	def all_all
+		render json: @all.all
+	end
+
+	def all_titles
+		render json: @all.titles		
+	end
+
+	def all_authors
+		render json: @all.authors		
+	end
+
+	def all_dates
+		render json: @all.dates
+	end
+
+	def all_links
+		render json: @all.links
 	end
 end
