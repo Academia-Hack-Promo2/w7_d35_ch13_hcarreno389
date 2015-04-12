@@ -3,14 +3,16 @@
 class ApiController < ApplicationController
 	
 
-	def all_notice
+	def mashable_titles
 	notice1 = Mashable.new
 	notice1.init
-	render json: notice1.print
-	# notice2 = Digg.new
-	# notice3 = Reddit.new
-	# mi_api = Mi_api.new 
-	# mi_api.all_notice
+	render json: notice1.titles
+	end
+	
+	def mashable_all
+		notice1 = Mashable.new
+		notice1.init
+		render json: notice1.all
 		
 	end
 end
