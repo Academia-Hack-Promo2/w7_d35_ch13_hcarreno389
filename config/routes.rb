@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  #mashable roots
   get 'noticias/mashable/all', to: 'api#mashable_all'
   get 'noticias/mashable/titles', to: 'api#mashable_titles'
   get 'noticias/mashable/authors', to: 'api#mashable_authors'
   get 'noticias/mashable/dates', to: 'api#mashable_dates'
   get 'noticias/mashable/links', to: 'api#mashable_links'
+
+  #digg roots
+  get 'noticias/digg/all', to: 'api#digg_all'
+  get 'noticias/digg/titles', to: 'api#digg_titles'
+  get 'noticias/digg/authors', to: 'api#digg_authors'
+  get 'noticias/digg/dates', to: 'api#digg_dates'
+  get 'noticias/digg/links', to: 'api#digg_links'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
